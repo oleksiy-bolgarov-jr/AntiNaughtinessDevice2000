@@ -11,6 +11,8 @@ For the version I released to the public, which is the version here, I have remo
 ## Important note
 If you wish to have this script shut down your computer, you need to add the relevant permissions to your sudoers file.
 
+regulators.py is the file that is to be run at startup.
+
 ## Things I still need to do
 - [ ] Add Windows support
 - [ ] Make the application more difficult to terminate
