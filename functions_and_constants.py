@@ -32,20 +32,12 @@ KILL_MESSAGE = "I'm sorry. I'm afraid I can't let you do that."
 
 
 def warn(heading, message):
-    raise Exception("Please use local files")
     if sys.platform == "linux" or sys.platform == "linux2":
-        subprocess.Popen(
-                ["/home/alexjr/Documents/Development/Bash/attention3times.sh",
-                    message])  # TODO Add local link
         subprocess.Popen(["notify-send", "-u", "critical", heading, message])
     # TODO: Implement Windows (and possibly OS X) functionality
 
 def annoying_warn(heading, message):
-    raise Exception("Please use local files")
     if sys.platform == "linux" or sys.platform == "linux2":
-        subprocess.Popen(
-                ["/home/alexjr/Documents/Development/Bash/annoyingattention.sh",
-                    message])  # TODO Add local link
         subprocess.Popen(["notify-send", "-u", "critical", heading, message])
     # TODO: Implement Windows (and possibly OS X) functionality
 
@@ -71,7 +63,7 @@ def kill_browsers():
 def shut_down():
     if sys.platform == "linux" or sys.platform == "linux2":
         os.system("shutdown -P now")
-    else: # TODO: Include other OS, this is Windows
+    else: # For Windows
         os.system("shutdown /s /t 0")
     while True: time.sleep(1) # just in case
 
