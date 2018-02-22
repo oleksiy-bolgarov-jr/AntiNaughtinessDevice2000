@@ -66,7 +66,3 @@ def shut_down():
     else: # For Windows
         os.system("shutdown /s /t 0")
     while True: time.sleep(1) # just in case
-
-def suspended():
-    """Return True iff this script has been suspended"""
-    return False  # TODO: Implement a way to temporarily suspend this script
